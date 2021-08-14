@@ -25,6 +25,7 @@ const ChatPage = () => {
   const sendChat = (e) => {
     e.preventDefault();
     const newMessage = e.target.newChat.value;
+    
     addToChat(newMessage);
     socket.emit("send to server", newMessage);
 
@@ -32,7 +33,7 @@ const ChatPage = () => {
   };
 
   return (
-    <div>
+    <div id="chatContainer">
       <div className={styles.chatMessgaes}>
         <ChatBox chatArray={chatHistory} />
       </div>
@@ -40,8 +41,8 @@ const ChatPage = () => {
       <div className={styles.chatInput}>
         <form onSubmit={(e) => sendChat(e)}>
           <label for="newChat"></label>
-          <input id="newChat" type="text" placeholder="type chat here" />
-          <input type="submit" placeholder="send" />
+          <input className={styles.newMessage} id="newChat" type="text" placeholder="type chat here" />
+          <input className={styles.sendButton} type="submit" value="send" />
         </form>
       </div>
     </div>

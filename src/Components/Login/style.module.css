@@ -9,10 +9,7 @@ form label {
     margin: 10px auto;
     height: unset;
 }
-form input[type="submit"] {
-    border-radius: 30px;
-    border-style: none;
-}
+
 form input[type="submit"]:hover {
     cursor: pointer;
 }

@@ -12,6 +12,19 @@
 
 
 
-input#newChat {
+.newMessage {
     margin: 0 auto;
+}
+
+form label {
+  display: none;
+}
+.sendButton {
+  margin: 0 auto;
+  border-radius: none;
+}
+
+#chatContainer {
+  margin: 30px auto;
+  background-color: teal;
 }

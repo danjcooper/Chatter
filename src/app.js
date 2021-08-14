@@ -13,7 +13,6 @@ const App = () => {
     return (
         <>
         <Nav/>
-        <h1>I want to be famous</h1>
         {/* <LoginPage /> */}
         <ChatPage />
         </>

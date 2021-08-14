@@ -9,3 +9,7 @@ body {
 .links {
     color: pink;
 }
+#chatContainer {
+    margin: 30px auto;
+    background-color: teal;
+  }
