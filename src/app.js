@@ -14,7 +14,7 @@ const App = () => {
         <>
         <Nav/>
         <h1>I want to be famous</h1>
-        <LoginPage />
+        {/* <LoginPage /> */}
         <ChatPage />
         </>
     )

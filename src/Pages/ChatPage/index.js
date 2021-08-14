@@ -6,8 +6,7 @@ import { ChatBox } from "../../Components";
 const socket = io("localhost:3000/");
 
 const ChatPage = () => {
-  const [chatHistory, setChatHistory] = useState([
-  ]);
+  const [chatHistory, setChatHistory] = useState([]);
 
   useEffect(() => {
     socket.on("msgfromsvr", (arg) => {
