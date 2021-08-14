@@ -1,0 +1,19 @@
+.chatArea {
+  width: 300px;
+  background: white;
+}
+
+.list {
+  text-align: left;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.chat-box li {
+  width: 300px;
+}
+
+input#newChat {
+    margin: 0 auto;
+}

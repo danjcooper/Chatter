@@ -1,5 +1,11 @@
 nav {
     width: 100vw;
-    background: burlywood;
-    padding: 40px
+    background: rgb(230, 230, 230);
+    padding: 30px;
+    text-align: center;
+   
+}
+.links {
+    color: rgb(26, 23, 23);
+    margin: auto 30px;
 }
