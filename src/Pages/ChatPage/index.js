@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import styles from "./style.module.css";
 import { ChatBox } from "../../Components";
 
-const socket = io("localhost:3000/");
+const socket = io("https://chatter-api-dc.herokuapp.com/");
 
 const ChatPage = () => {
   const [chatHistory, setChatHistory] = useState([]);
