@@ -10,7 +10,7 @@ ul {
     width: 300px;
     padding: 0;
     height: 300px;
-    overflow: scroll;
+    overflow-x: scroll;
     background: white;
     margin: 0 auto;
 

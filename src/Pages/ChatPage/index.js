@@ -1,21 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { io } from "socket.io-client";
 import styles from "./style.module.css";
 import { ChatBox } from "../../Components";
 
+const socket = io("localhost:3000/");
+
 const ChatPage = () => {
   const [chatHistory, setChatHistory] = useState([
-    "i'm a placeholder, remove me",
   ]);
-  // if there is a new chat - add it to the state and render it.
+
+  useEffect(() => {
+    socket.on("msgfromsvr", (arg) => {
+      addToChat(arg);
+    });
+  }, []);
+
+  const addToChat = (msg) => {
+    setChatHistory((state) => {
+      const newHistory = state.slice();
+      newHistory.push(msg);
+      return newHistory;
+    });
+  };
 
   const sendChat = (e) => {
     e.preventDefault();
     const newMessage = e.target.newChat.value;
-    setChatHistory((state) => {
-      const newHistory = state.slice();
-      newHistory.push(newMessage);
-      return newHistory;
-    });
+    addToChat(newMessage);
+    socket.emit("send to server", newMessage);
 
     e.target.newChat.value = "";
   };
@@ -29,7 +41,7 @@ const ChatPage = () => {
       <div className={styles.chatInput}>
         <form onSubmit={(e) => sendChat(e)}>
           <label for="newChat"></label>
-          <input id="newChat" type="text" placeholder="type chat here"/>
+          <input id="newChat" type="text" placeholder="type chat here" />
           <input type="submit" placeholder="send" />
         </form>
       </div>
