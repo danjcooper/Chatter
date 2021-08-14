@@ -29,7 +29,7 @@ const ChatPage = () => {
       <div className={styles.chatInput}>
         <form onSubmit={(e) => sendChat(e)}>
           <label for="newChat"></label>
-          <input id="newChat" type="text" />
+          <input id="newChat" type="text" placeholder="type chat here"/>
           <input type="submit" placeholder="send" />
         </form>
       </div>

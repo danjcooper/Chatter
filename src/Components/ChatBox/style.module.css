@@ -2,7 +2,8 @@
     background: white;
     list-style: none;
     width: 300px;
-    margin: 0 auto;
+    margin: 10px auto;
+    padding: 0 10px;
 }
 
 ul {
@@ -14,7 +15,8 @@ ul {
     margin: 0 auto;
 
 }
+.chat-box li {
+    width: 300px;
+    margin: 50px auto;
+  }
 
-.chatMessgaes {
-    
-}

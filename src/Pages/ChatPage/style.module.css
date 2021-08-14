@@ -10,9 +10,7 @@
   margin: 0;
 }
 
-.chat-box li {
-  width: 300px;
-}
+
 
 input#newChat {
     margin: 0 auto;
