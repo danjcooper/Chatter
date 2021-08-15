@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./style.module.css";
 
 const Nav = () => {
+  
+
   return (
     <nav>
-      <a className={styles.links} href="#">I'm a link</a>
-      <a className={styles.links} href="#">I'm a link</a>
-      <a className={styles.links} href="#">I'm a link</a>
-      <a className={styles.links} href="#">I'm a link</a>
+    <h1>Chatter</h1>
+      {/* <a className={styles.links} href="#">Log out</a> */}
     </nav>
   );
 };

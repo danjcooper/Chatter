@@ -20,6 +20,10 @@
     background-color: #E8E8E8;
     font-size: 18px;
 }
+.newMessage:focus {
+  background-color: #d1d1d1;
+
+}
 
 form label {
   display: none;

@@ -1,11 +1,15 @@
 nav {
     width: 100vw;
-    background: rgb(230, 230, 230);
-    padding: 30px;
+    background: #347F7F;
+    padding: 7px;
     text-align: center;
    
 }
 .links {
-    color: rgb(26, 23, 23);
+    color: rgb(255, 255, 255);
     margin: auto 30px;
+    text-decoration: none;
+}
+h1 {
+    color: white;
 }
