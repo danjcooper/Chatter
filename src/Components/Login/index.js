@@ -6,7 +6,7 @@ const Login =({handleSubmit}) => {
         <div>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <label>Username</label>
-                <input id="username" type="text"></input>
+                <input id="username" type="text" placeholder="enter username"></input>
                 <input type="submit" value="Get Chatting" ></input>
             </form>
         </div>
