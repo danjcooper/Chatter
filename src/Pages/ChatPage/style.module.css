@@ -14,6 +14,11 @@
 
 .newMessage {
     margin: 0 auto;
+    outline: none;
+    height: 70px;
+    border-style: none;
+    background-color: #E8E8E8;
+    font-size: 18px;
 }
 
 form label {
@@ -22,9 +27,19 @@ form label {
 .sendButton {
   margin: 0 auto;
   border-radius: none;
+  height: 70px;
+  background-color: #408e8e;
+  outline: none;
+  border-style: none;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+
+}
+.sendButton:hover {
+
+  background-color: #4ca1a1;
+
+
 }
 
-#chatContainer {
-  margin: 30px auto;
-  background-color: teal;
-}

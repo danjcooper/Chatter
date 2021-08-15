@@ -1,9 +1,10 @@
 form input, label {
     display: block;
     margin: 20px auto;
-    width: 300px;
+    width: 400px;
     height: 40px;
     text-align: center;
+
 }
 form label {
     margin: 10px auto;

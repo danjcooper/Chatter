@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { io } from "socket.io-client";
 import styles from "./style.module.css";
+import "./style.css"
 import { ChatBox } from "../../Components";
 
 const socket = io("https://chatter-api-dc.herokuapp.com/");
 
 const ChatPage = () => {
-  const [chatHistory, setChatHistory] = useState([{username: "billy", message: "hey"}]);
+  const [chatHistory, setChatHistory] = useState([{username: "Chatter", message: "hey, welcome to the room."}]);
+
+
 
   useEffect(() => {
     socket.on("msgfromsvr", (arg) => {
@@ -14,6 +17,7 @@ const ChatPage = () => {
     });
   }, []);
 
+  
   const addToChat = (msg) => {
     setChatHistory((state) => {
       const newHistory = state.slice();
@@ -41,7 +45,7 @@ const ChatPage = () => {
 
   return (
     <div id="chatContainer">
-      <div className={styles.chatMessgaes}>
+      <div className={styles.chatMessages}>
         <ChatBox chatArray={chatHistory} />
       </div>
 
@@ -49,7 +53,7 @@ const ChatPage = () => {
         <form onSubmit={(e) => sendChat(e)}>
           <label for="newChat"></label>
           <input className={styles.newMessage} id="newChat" type="text" placeholder="type chat here" />
-          <input className={styles.sendButton} type="submit" value="send" />
+          <input className={styles.sendButton} type="submit" value="Send" />
         </form>
       </div>
     </div>

@@ -2,14 +2,15 @@
     box-sizing: border-box;
 }
 body {
-    background-color: brown;
+    background-color: #408e8e;
     margin: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
-.links {
-    color: pink;
-}
+
 #chatContainer {
     margin: 30px auto;
-    background-color: teal;
+    width: 100vw;
+    height: 100vh;
   }

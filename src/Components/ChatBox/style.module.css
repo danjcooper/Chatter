@@ -1,20 +1,23 @@
 .chatMessage {
  
     list-style: none;
-    width: 300px;
+    width: 400px;
     margin: 10px auto;
     padding: 0 10px;
     font-weight: bold;
 }
 
 ul {
-    width: 300px;
+    width: 400px;
     padding: 0;
     height: 300px;
     overflow-x: scroll;
     background: white;
     margin: 0 auto;
 
+}
+ul::-webkit-scrollbar {
+    display: none;
 }
 .chat-box li {
     width: 300px;
