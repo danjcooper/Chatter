@@ -6,7 +6,7 @@ const ChatBox = ({chatArray}) => {
     <>
       <ul>
         {chatArray.map((msg, i) => (
-          <li key={i} className={styles.chatMessage}>{msg}</li>
+          <li key={i} className={styles.chatMessage}><span className={styles.username}>{msg.username}: </span> {msg.message}</li>
         ))}
       </ul>
       </>

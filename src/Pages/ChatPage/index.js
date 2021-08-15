@@ -6,7 +6,7 @@ import { ChatBox } from "../../Components";
 const socket = io("https://chatter-api-dc.herokuapp.com/");
 
 const ChatPage = () => {
-  const [chatHistory, setChatHistory] = useState([]);
+  const [chatHistory, setChatHistory] = useState([{username: "billy", message: "hey"}]);
 
   useEffect(() => {
     socket.on("msgfromsvr", (arg) => {
@@ -25,9 +25,16 @@ const ChatPage = () => {
   const sendChat = (e) => {
     e.preventDefault();
     const newMessage = e.target.newChat.value;
+    const username = localStorage.getItem("username") ? localStorage.getItem("username") : "stranger"
+  
     
-    addToChat(newMessage);
-    socket.emit("send to server", newMessage);
+    const op = {
+      username: username,
+      message: newMessage
+    }
+
+    addToChat(op);
+    socket.emit("send to server", op);
 
     e.target.newChat.value = "";
   };

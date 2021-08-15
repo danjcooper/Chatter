@@ -1,9 +1,10 @@
 .chatMessage {
-    background: white;
+ 
     list-style: none;
     width: 300px;
     margin: 10px auto;
     padding: 0 10px;
+    font-weight: bold;
 }
 
 ul {
@@ -20,3 +21,6 @@ ul {
     margin: 50px auto;
   }
 
+.username {
+    font-weight: normal;
+}
