@@ -1,30 +1,43 @@
-import React, {useRef, useEffect} from "react";
-import styles from "./style.module.css"
+import React, { useRef, useEffect, useState } from 'react';
+import styles from './style.module.css';
 
-const ChatBox = ({chatArray}) => {
+const ChatBox = ({ chatArray }) => {
+  const [username, setUsername] = useState(localStorage.getItem('username'));
 
-  const messagesEndRef = useRef(null)
+  const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
-    scrollToBottom()
+    scrollToBottom();
   }, [chatArray]);
-
 
   return (
     <>
-      <ul  >
+      <ul>
         {chatArray.map((msg, i) => (
-          <li key={i} className={styles.chatMessage}><span className={styles.username}>{msg.username}: </span> {msg.message}</li>
+          <li
+            key={i}
+            className={
+              username === msg.username ? styles.sentByUser : styles.username
+            }
+          >
+            <span
+              className={
+                username === msg.username ? styles.sentByUser : styles.username
+              }
+            >
+              {msg.username}:{' '}
+            </span>{' '}
+            {msg.message}
+          </li>
         ))}
         <div ref={messagesEndRef}></div>
       </ul>
-      </>
+    </>
   );
 };
-
 
 export default ChatBox;

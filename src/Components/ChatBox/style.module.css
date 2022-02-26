@@ -1,29 +1,36 @@
 .chatMessage {
- 
-    list-style: none;
-    width: 400px;
-    margin: 10px auto;
-    padding: 0 10px;
-    font-weight: bold;
+  list-style: none;
+  width: 400px;
+  margin: 10px auto;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.sentByUser {
+  text-align: right;
+  list-style: none;
+  width: 400px;
+  margin: 10px auto;
+  padding: 0 10px;
+  font-weight: bold;
 }
 
 ul {
-    width: 400px;
-    padding: 0;
-    height: 300px;
-    overflow-x: scroll;
-    background: white;
-    margin: 0 auto;
-
+  width: 400px;
+  padding: 0;
+  height: 300px;
+  overflow-x: scroll;
+  background: white;
+  margin: 0 auto;
 }
 ul::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .chat-box li {
-    width: 300px;
-    margin: 50px auto;
-  }
+  width: 300px;
+  margin: 50px auto;
+}
 
 .username {
-    font-weight: normal;
+  font-weight: normal;
 }
